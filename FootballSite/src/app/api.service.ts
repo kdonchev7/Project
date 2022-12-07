@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
-import { IGames } from './shared/interfaces/games';
+import { IUser } from './shared/interfaces';
 
 const apiUrl = environment.apiUrl;
 
@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   loadData() {
-    return this.httpClient.get<IGames[]>(`${apiUrl}/home`)
+    return this.httpClient.get<IUser[]>(`${apiUrl}/planets`)
   }
 
   // loadPosts(limit?: number) {

@@ -27,6 +27,7 @@ body {
     padding: 35px 35px 0 35px;
     font-weight: 300;
     color: #5610da;
+    text-align: center;
 }
 
 .login-form .content {
@@ -127,4 +128,8 @@ body {
 
 p {
     color: #5710da;
+}
+
+.error {
+    color: red;
 }

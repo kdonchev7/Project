@@ -1,10 +1,10 @@
 export interface IUser {
-    // _id: string;
-    // password: string;
+    _id: string;
+    password: string;
     firstName: string;
     lastName: string;
-    // email: string;
-    // tel: string;
-    // gamesJoined: string[];
-    // gamesCreated: string[];
+    username: string;
+    tel: string;
+    gamesJoined: string[];
+    gamesCreated: string[];
 }

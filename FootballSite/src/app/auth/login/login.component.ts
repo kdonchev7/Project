@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -15,13 +15,17 @@ export class LoginComponent {
     { static: true }
   ) form!: ElementRef<HTMLInputElement>;
 
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router, private authService: AuthService, private activatedRoute: ActivatedRoute) {
     this.authService.user = {
       firstName: 'Pesho',
       lastName: 'Ivanov'
-    };
+    } as any;
 
-    this.router.navigate(['/all-games']);
+    // this.router.navigate(['/all-games']);
+
+    const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
+
+    this.router.navigate([returnUrl]);
   }
 
   loginHandler(form: NgForm): void {

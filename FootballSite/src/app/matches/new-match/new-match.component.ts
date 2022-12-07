@@ -16,7 +16,9 @@ export class NewMatchComponent {
   ) form!: ElementRef<HTMLInputElement>;
 
   constructor(private router: Router, private authService: AuthService) {
-
+    if (!this.authService.user){
+      this.router.navigate(['/auth/login'])
+    }
   }
 
   createGameHandler(form: NgForm): void {

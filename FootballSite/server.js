@@ -4,6 +4,7 @@ const app = express();
 
 const uri =
     "mongodb+srv://myproject:FootballSite@footballsitecluster.hdqkenu.mongodb.net/?retryWrites=true&w=majority"
+    // "mongodb://localhost:27017/forum"
 async function connect() {
     try {
         await mongoose.connect(uri);

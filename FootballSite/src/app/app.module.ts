@@ -14,8 +14,8 @@ import { MatchesModule } from './matches/matches.module';
   ],
   imports: [
     AuthModule,
-    AppRoutingModule,
     MatchesModule,
+    AppRoutingModule,
     BrowserModule,
     CoreModule,
     HttpClientModule
