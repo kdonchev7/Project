@@ -1,0 +1,35 @@
+<p>new-match works!</p>
+<div>
+    <form #form="ngForm" (ngSubmit)="createGameHandler(form)">
+        <h1>Create a new match</h1>
+        <div class="content">
+            <div class="input-field">
+                <input type="text" #titleInput="ngModel" ngModel required name="title" id="title" placeholder="Title for game">
+            </div>
+            <div class="input-field">
+                <textarea type="text" #descriptionInput="ngModel" ngModel required name="description" id="description" placeholder="Description"></textarea>
+            </div>
+            <div class="input-field">
+                <input type="text" #placeInput="ngModel" ngModel required name="place" id="place" placeholder="Place of the game">
+            </div>
+            <div class="input-field">
+                <input type="text" #dateInput="ngModel" ngModel required name="date" id="date" placeholder="Date and time of match">
+            </div>
+            <div class="input-field">
+                <input type="number" #peopleNeededInput="ngModel" ngModel required name="peopleNeeded" id="peopleNeeded" placeholder="Number of people needed">
+            </div>
+        </div>
+        <div class="action">
+            <button>Create</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- title: string;
+userId: IUser;
+description: string;
+createdAt: string;
+place: string;
+peopleNeeded: number;
+date: string; -->

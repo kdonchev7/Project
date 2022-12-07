@@ -1,0 +1,17 @@
+<div class="login-form">
+    <form #form="ngForm" (ngSubmit)="loginHandler(form)">
+        <h1>Login</h1>
+        <div class="content">
+            <div class="input-field">
+                <input type="email" #emailInput="ngModel" ngModel required name="email" id="email" placeholder="email">
+            </div>
+            <div class="input-field">
+                <input type="password" #passwordInput="ngModel" ngModel required placeholder="Password" name="password" id="password">
+            </div>
+            <p>You don't have an account yet? <a routerLink="/auth/register" class="link">Register here</a></p>
+        </div>
+        <div class="action">
+            <button>Sign in</button>
+        </div>
+    </form>
+</div>

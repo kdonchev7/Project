@@ -1,0 +1,34 @@
+<div class="register-form">
+    <form #form="ngForm" (ngSubmit)="registerHandler(form)">
+        <h1>Login</h1>
+        <div class="content">
+            <div class="input-field">
+                <input type="email" #emailInput="ngModel" ngModel required name="email" id="email" placeholder="email">
+            </div>
+            <div class="input-field">
+                <input type="text" #firstNameInput="ngModel" ngModel required name="firstName" id="firstName"
+                    placeholder="first Name">
+            </div>
+            <div class="input-field">
+                <input type="text" #lastNameInput="ngModel" ngModel required name="lastName" id="lastName"
+                    placeholder="last Name">
+            </div>
+            <div class="input-field">
+                <input type="tel" #telInput="ngModel" ngModel required name="tel" id="tel"
+                    placeholder="Phone number">
+            </div>
+            <div class="input-field">
+                <input type="password" #passwordInput="ngModel" ngModel required placeholder="Password" name="password"
+                    id="password">
+            </div>
+            <div class="input-field">
+                <input type="password" #rePasswordInput="ngModel" ngModel required name="rePassword" id="rePassword"
+                    placeholder="Confirm password">
+            </div>
+            <p>Already have an account? <a routerLink="/auth/login" class="link">Sign in here</a></p>
+        </div>
+        <div class="action">
+            <button>Register</button>
+        </div>
+    </form>
+</div>
